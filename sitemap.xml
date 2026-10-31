@@ -1,8 +1,18 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://davidizooba.github.io/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <image:image><image:loc>https://davidizooba.github.io/david-izooba-portrait.jpg</image:loc></image:image>
+    <image:image><image:loc>https://davidizooba.github.io/photos/david-izooba-worship-guitarist-with-band-and-choir.jpg</image:loc></image:image>
+    <image:image><image:loc>https://davidizooba.github.io/photos/david-izooba-guitarist-smiling-on-stage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://davidizooba.github.io/photos/david-izooba-guitarist-electric-guitar-live.jpg</image:loc></image:image>
+    <image:image><image:loc>https://davidizooba.github.io/photos/david-izooba-guitarist-worship-stage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://davidizooba.github.io/photos/david-izooba-playing-gretsch-electric-guitar.jpg</image:loc></image:image>
   </url>
-</urlset>
+  <url><loc>https://davidizooba.github.io/journal/</loc></url>
+{% for post in site.posts %}  <url><loc>{{ site.url }}{{ post.url }}</loc><lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod></url>
+{% endfor %}</urlset>

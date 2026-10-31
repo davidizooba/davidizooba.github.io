@@ -1,0 +1,7 @@
+title: David Izooba
+description: Guitarist, worship leader and leadership practitioner from Kampala, Uganda.
+url: https://davidizooba.github.io
+author: David Izooba
+permalink: /journal/:year/:title/
+markdown: kramdown
+exclude: [README.md]
