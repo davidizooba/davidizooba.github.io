@@ -1,0 +1,40 @@
+---
+title: Journal
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journal | David Izooba</title>
+<meta name="description" content="Reflections by David Izooba on leadership, worship, mentorship and seasons.">
+<link rel="canonical" href="https://davidizooba.github.io/journal/">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a0c;--card:#17141a;--ink:#f3ede4;--muted:#a69d92;--line:rgba(243,237,228,.1);--amber:#e6a25a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Inter,system-ui,sans-serif}
+nav{border-bottom:1px solid var(--line)}nav div{max-width:900px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;font-size:14px}
+nav a{color:var(--ink);text-decoration:none}.logo{font-family:Fraunces,serif;font-size:20px}.logo i{color:var(--amber)}
+main{max-width:900px;margin:0 auto;padding:90px 24px 120px}
+h1{font-family:Fraunces,serif;font-weight:300;font-size:clamp(52px,10vw,110px);line-height:.9;letter-spacing:-.04em;margin:0 0 20px}h1 em{color:var(--amber)}
+.lead{color:var(--muted);font-size:19px;max-width:560px}
+.post{display:block;padding:34px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:padding .3s}
+.post:hover{padding-left:12px}.post time{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.post h2{font-family:Fraunces,serif;font-weight:300;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:8px 0}.post p{color:var(--muted);margin:0}
+.empty{margin-top:60px;padding:40px;border:1px dashed var(--line);border-radius:8px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav><div><a class="logo" href="/">David <i>Izooba</i></a><a href="/">← Home</a></div></nav>
+<main>
+<h1>The <em>Journal</em></h1>
+<p class="lead">Reflections on leadership, worship, mentorship and the seasons God takes us through.</p>
+<div style="margin-top:50px;border-top:1px solid var(--line)">
+{% for post in site.posts %}
+<a class="post" href="{{ post.url }}"><time>{{ post.date | date: "%d %B %Y" }}</time><h2>{{ post.title }}</h2><p>{{ post.excerpt | strip_html | truncate: 180 }}</p></a>
+{% endfor %}
+</div>
+{% if site.posts.size == 0 %}<div class="empty">First reflections coming soon.</div>{% endif %}
+</main>
+</body>
+</html>
