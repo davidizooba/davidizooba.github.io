@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -62,8 +62,8 @@
 <style>
 :root{
   --bg:#0b0a0c; --bg2:#121014; --card:#17141a; --ink:#f3ede4; --muted:#a69d92; --dim:#6f675f;
-  --line:rgba(243,237,228,.10); --amber:#e6a25a; --violet:#8b5cf6;
-  --serif:Fraunces,Georgia,serif; --sans:Inter,system-ui,sans-serif;
+  --line:rgba(243,237,228,.10); --amber:#b9a4ff; --violet:#8b5cf6;
+  --serif:Manrope,Inter,system-ui,sans-serif; --sans:Inter,system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -77,34 +77,30 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opa
 nav{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .3s}
 nav.solid{background:rgba(11,10,12,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
-.logo{font-family:var(--serif);font-size:20px;font-weight:500;text-decoration:none}
-.logo i{color:var(--amber);font-weight:300}
+.logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+.logo i{font-style:normal;color:var(--muted);font-weight:500}
 nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
 nav ul a:hover{color:var(--ink)}
 @media (max-width:700px){nav ul{gap:16px;font-size:11px}nav ul li.hide{display:none}}
 
 .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:120px 0 80px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url(photos/david-izooba-worship-guitarist-with-band-and-choir.jpg) center 35%/cover;transform:scale(1.06);animation:drift 22s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.06);animation:drift 22s ease-in-out infinite alternate}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,12,.35) 0%,rgba(11,10,12,.2) 40%,rgba(11,10,12,.92) 82%,var(--bg) 100%),radial-gradient(80% 60% at 15% 100%,rgba(139,92,246,.22),transparent 60%)}
 @keyframes drift{to{transform:scale(1.14) translate(-1.5%,-1%)}}
 .hero .wrap{position:relative;z-index:2;width:100%}
 .kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);margin:0 0 18px;display:flex;align-items:center;gap:12px}
 .kicker:before{content:"";width:36px;height:1px;background:var(--amber)}
-h1{font-family:var(--serif);font-weight:300;font-size:clamp(64px,13vw,176px);line-height:.86;letter-spacing:-.045em;margin:0}
-h1 em{font-style:italic;color:var(--amber);font-weight:300}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(56px,11vw,150px);line-height:.92;letter-spacing:-.05em;margin:0}
+h1 em{font-style:normal;color:var(--muted);font-weight:300}
 .hero p.sub{max-width:520px;font-size:19px;color:#ddd5ca;margin:30px 0 0}
 
-.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:22px 0;background:var(--bg2)}
-.marquee div{display:inline-block;animation:mq 40s linear infinite;font-family:var(--serif);font-style:italic;font-size:clamp(26px,4vw,42px);font-weight:300;color:var(--muted)}
-.marquee b{font-style:normal;color:var(--amber);font-weight:300;margin:0 26px}
-@keyframes mq{to{transform:translateX(-50%)}}
 
 section{padding:120px 0;position:relative}
 .label{display:flex;gap:14px;align-items:baseline;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:26px}
 .label b{color:var(--amber);font-weight:500}
-h2{font-family:var(--serif);font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.03em;margin:0 0 26px}
-h2 em{color:var(--amber)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.03em;margin:0 0 26px}
+h2 em{font-style:normal;color:var(--amber)}
 .lead{font-size:20px;color:#d9d1c6;max-width:640px}
 .muted{color:var(--muted)}
 
@@ -120,8 +116,8 @@ h2 em{color:var(--amber)}
 .believe li{display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:baseline;padding:26px 0;border-top:1px solid var(--line);transition:padding .3s}
 .believe li:hover{padding-left:12px}
 .believe li span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-.believe li p{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,3.3vw,38px);line-height:1.18;letter-spacing:-.02em}
-.believe li p em{color:var(--amber)}
+.believe li p{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.3vw,38px);line-height:1.18;letter-spacing:-.02em}
+.believe li p em{font-style:normal;color:var(--amber)}
 @media (max-width:640px){.believe li{grid-template-columns:1fr;gap:6px}}
 
 .covers{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:50px}
@@ -131,7 +127,7 @@ h2 em{color:var(--amber)}
 .cover .art:after{content:"▶";position:absolute;inset:0;display:grid;place-items:center;font-size:26px;color:#fff;background:rgba(11,10,12,.45);opacity:0;transition:opacity .35s}
 .cover:hover .art img{transform:scale(1.06)}
 .cover:hover .art:after{opacity:1}
-.cover h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.2;margin:16px 0 2px}
+.cover h3{font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.2;margin:16px 0 2px}
 .cover small{color:var(--muted);font-size:13px}
 @media (max-width:980px){.covers{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:600px){.covers{grid-template-columns:1fr 1fr;gap:16px}}
@@ -139,7 +135,8 @@ h2 em{color:var(--amber)}
 .also a{color:var(--ink)}
 
 .gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:90px;gap:12px;margin-top:46px}
-.gal figure{margin:0;overflow:hidden;border-radius:6px;background:var(--card)}
+.gal figure{margin:0;overflow:hidden;border-radius:6px;background:var(--card);position:relative}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;font-size:12px;letter-spacing:.02em;color:#ece6dc;background:linear-gradient(transparent,rgba(0,0,0,.7))}
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
 .gal figure:hover img{transform:scale(1.05)}
 .g1{grid-column:span 7;grid-row:span 5}.g2{grid-column:span 5;grid-row:span 3}.g3{grid-column:span 5;grid-row:span 2}
@@ -148,7 +145,7 @@ h2 em{color:var(--amber)}
 
 .journal{background:var(--bg2);border-block:1px solid var(--line)}
 .jcard{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:44px;margin-top:36px;background:radial-gradient(60% 120% at 100% 0%,rgba(139,92,246,.16),transparent 60%),var(--card)}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:var(--amber);color:#16110b;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;transition:transform .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:var(--ink);color:#0b0a0c;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;transition:transform .2s}
 .btn:hover{transform:translateX(4px)}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(243,237,228,.3)}
 @media (max-width:700px){.jcard{grid-template-columns:1fr;padding:28px}}
@@ -180,18 +177,13 @@ footer h2{font-size:clamp(42px,7vw,96px)}
 
 <main id="top">
 <header class="hero">
-  <div class="hero-bg" role="img" aria-label="David Izooba playing guitar during a Watoto Church service"></div>
+  <img class="hero-bg" src="photos/david-izooba-worship-guitarist-with-band-and-choir.jpg" width="1400" height="933" fetchpriority="high" alt="David Izooba, guitarist, playing guitar during a Watoto Church service in Kampala, Uganda">
   <div class="wrap">
     <p class="kicker">Kampala, Uganda</p>
     <h1>David<br><em>Izooba</em></h1>
     <p class="sub">A guitarist and a servant at heart. Grateful for every season, and for every person I've been given to walk with.</p>
   </div>
 </header>
-
-<div class="marquee" aria-hidden="true"><div>
-  Worship <b>✦</b> People <b>✦</b> Seasons <b>✦</b> Mentorship <b>✦</b> Discipleship <b>✦</b> Systems that work <b>✦</b> The Word <b>✦</b>
-  Worship <b>✦</b> People <b>✦</b> Seasons <b>✦</b> Mentorship <b>✦</b> Discipleship <b>✦</b> Systems that work <b>✦</b> The Word <b>✦</b>
-</div></div>
 
 <section id="about">
   <div class="wrap about">
@@ -239,12 +231,13 @@ footer h2{font-size:clamp(42px,7vw,96px)}
   <div class="wrap">
     <div class="label rv"><b>04</b> Moments</div>
     <h2 class="rv">At <em>Watoto</em> Church.</h2>
+    <p class="lead rv">Photos of David Izooba playing guitar during services at Watoto Church, Kampala, Uganda.</p>
     <div class="gal">
-      <figure class="g1 rv"><img src="photos/david-izooba-worship-guitarist-with-band-and-choir.jpg" loading="lazy" alt="David Izooba playing guitar with the band and choir at Watoto Church"></figure>
-      <figure class="g2 rv"><img src="photos/david-izooba-guitarist-electric-guitar-live.jpg" loading="lazy" alt="David Izooba playing electric guitar at Watoto Church"></figure>
-      <figure class="g3 rv"><img src="photos/david-izooba-guitarist-smiling-on-stage.jpg" loading="lazy" style="object-position:center 25%" alt="David Izooba smiling on stage at Watoto Church"></figure>
-      <figure class="g4 rv"><img src="photos/david-izooba-guitarist-worship-stage.jpg" loading="lazy" style="object-position:center 30%" alt="David Izooba playing guitar during worship at Watoto Church"></figure>
-      <figure class="g5 rv"><img src="photos/david-izooba-playing-gretsch-electric-guitar.jpg" loading="lazy" alt="David Izooba playing a Gretsch guitar at Watoto Church"></figure>
+      <figure class="g1 rv"><img src="photos/david-izooba-worship-guitarist-with-band-and-choir.jpg" loading="lazy" alt="David Izooba playing guitar with the band and choir at Watoto Church"><figcaption>David Izooba playing guitar with the band and choir, Watoto Church</figcaption></figure>
+      <figure class="g2 rv"><img src="photos/david-izooba-guitarist-electric-guitar-live.jpg" loading="lazy" alt="David Izooba playing electric guitar at Watoto Church"><figcaption>David Izooba on electric guitar, Watoto Church</figcaption></figure>
+      <figure class="g3 rv"><img src="photos/david-izooba-guitarist-smiling-on-stage.jpg" loading="lazy" style="object-position:center 25%" alt="David Izooba smiling on stage at Watoto Church"><figcaption>David Izooba on stage, Watoto Church</figcaption></figure>
+      <figure class="g4 rv"><img src="photos/david-izooba-guitarist-worship-stage.jpg" loading="lazy" style="object-position:center 30%" alt="David Izooba playing guitar during worship at Watoto Church"><figcaption>David Izooba in worship, Watoto Church</figcaption></figure>
+      <figure class="g5 rv"><img src="photos/david-izooba-playing-gretsch-electric-guitar.jpg" loading="lazy" alt="David Izooba playing a Gretsch guitar at Watoto Church"><figcaption>David Izooba playing a Gretsch guitar, Watoto Church</figcaption></figure>
     </div>
   </div>
 </section>
@@ -271,7 +264,7 @@ footer h2{font-size:clamp(42px,7vw,96px)}
       <a class="btn ghost" href="https://www.facebook.com/david.izooba" rel="me" target="_blank">Facebook</a>
       <a class="btn ghost" href="https://x.com/david_izooba" rel="me" target="_blank">X</a>
     </div>
-    <div class="fine"><span>© 2026 David Izooba · Kampala, Uganda</span><span>Soli Deo gloria</span></div>
+    <div class="fine"><span>© 2026 David Izooba · Kampala, Uganda</span><span>Guitarist · Kampala</span></div>
   </div>
 </footer>
 
