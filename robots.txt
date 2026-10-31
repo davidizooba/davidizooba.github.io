@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://davidizooba.github.io/sitemap.xml
